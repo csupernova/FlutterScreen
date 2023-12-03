@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen/constants/colors.dart';
-import 'package:flutter_screen/ui/profile/filters/chips.dart';
 import 'package:flutter_screen/ui/profile/profile.dart';
+import 'package:flutter_screen/ui/settings/settingsScreen.dart';
 import 'package:flutter_screen/ui/topsection/topsection.dart';
 
 void main() {
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           headerSliverBuilder: (context, innerBoxInScrolled) =>
               [sliverAppBar()],
           body: const TabBarView(
-            children: [profileScreen(), Text("HEll")],
+            children: [profileScreen(), settingsScreen()],
           )),
     );
   }

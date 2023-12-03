@@ -39,54 +39,60 @@ class carousel extends StatelessWidget {
                   itemCount: 2,
                   itemBuilder: (context, index) {
                     return SizedBox(
-                      width: 216,
-                      child: Card(
-                        surfaceTintColor: Colors.white,
-                        child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
+                        width: 216,
+                        child: Card(
+                          surfaceTintColor: Colors.white,
+                          child: InkWell(
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                            onTap: () {},
+                            child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  Row(
+                                    children: [
+                                      Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 16, left: 16, right: 12),
+                                          child: images[index]),
+                                      Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Text(Strings.titles[index],
+                                              style: const TextStyle(
+                                                fontSize:
+                                                    Sizes.fontCardTitleSize,
+                                                fontWeight: FontWeight.w500,
+                                                color: AppColors.black,
+                                                height: 20 / 16,
+                                              )))
+                                    ],
+                                  ),
                                   Padding(
                                       padding: const EdgeInsets.only(
-                                          top: 16, left: 16, right: 12),
-                                      child: images[index]),
+                                          top: 18, left: 16),
+                                      child:
+                                          Text(Strings.secondary_titles[index],
+                                              style: const TextStyle(
+                                                fontSize: Sizes.fontRegularSize,
+                                                fontWeight: FontWeight.w500,
+                                                color: Color(0xff000000),
+                                                height: 18 / 14,
+                                              ))),
                                   Padding(
-                                      padding: const EdgeInsets.only(top: 10),
-                                      child: Text(Strings.titles[index],
-                                          style: const TextStyle(
-                                            fontSize: Sizes.fontCardTitleSize,
-                                            fontWeight: FontWeight.w500,
-                                            color: AppColors.black,
-                                            height: 20 / 16,
-                                          )))
-                                ],
-                              ),
-                              Padding(
-                                  padding:
-                                      const EdgeInsets.only(top: 18, left: 16),
-                                  child: Text(Strings.secondary_titles[index],
-                                      style: const TextStyle(
-                                        fontSize: Sizes.fontRegularSize,
-                                        fontWeight: FontWeight.w500,
-                                        color: Color(0xff000000),
-                                        height: 18 / 14,
-                                      ))),
-                              Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 16, left: 16),
-                                  child:
-                                      Text(Strings.secondary_subtitles[index],
+                                      padding: const EdgeInsets.only(
+                                          bottom: 16, left: 16),
+                                      child: Text(
+                                          Strings.secondary_subtitles[index],
                                           style: const TextStyle(
                                             fontSize: Sizes.fontRegularSize,
                                             fontWeight: FontWeight.w500,
                                             color: Color(0xff000000),
                                             height: 18 / 14,
                                           )))
-                            ]),
-                      ),
-                    );
+                                ]),
+                          ),
+                        ));
                   },
                 ),
               )

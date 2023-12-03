@@ -16,27 +16,33 @@ class _ChipsState extends State<Chips> {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 8,
-      children: Strings.filters.asMap().entries.map((entry) {
-        int index = entry.key;
-        String tag = entry.value;
-        return RawChip(
-          selected: _isSelected[index],
-          label: Text(tag),
-          side: BorderSide.none,
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          onPressed: () {
-            setState(() {
-              _isSelected[index] = !_isSelected[index];
-              _isPressed[index] = !_isPressed[index];
-            });
-          },
-          backgroundColor: Color.fromRGBO(0, 0, 0, 0.08),
-          selectedColor: AppColors.iconGreen,
-        );
-      }).toList(),
-    );
+    return Padding(
+        padding: const EdgeInsets.only(left: 16),
+        child: Wrap(
+          runSpacing: -5,
+          spacing: 8,
+          children: Strings.filters.asMap().entries.map((entry) {
+            int index = entry.key;
+            String tag = entry.value;
+            return RawChip(
+              selected: _isSelected[index],
+              label: Text(tag,
+                  style: const TextStyle(
+                    fontSize: 14,
+                  )),
+              side: BorderSide.none,
+              shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              onPressed: () {
+                setState(() {
+                  _isSelected[index] = !_isSelected[index];
+                  _isPressed[index] = !_isPressed[index];
+                });
+              },
+              backgroundColor: Color.fromRGBO(0, 0, 0, 0.08),
+              selectedColor: AppColors.iconGreen,
+            );
+          }).toList(),
+        ));
   }
 }

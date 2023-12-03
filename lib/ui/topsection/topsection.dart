@@ -10,7 +10,13 @@ SliverAppBar sliverAppBar() {
     floating: false,
     leading: IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
     actions: [
-      IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_right_alt))
+      IconButton(
+          onPressed: () {},
+          icon: const Image(
+            image: AssetImage("assets/images/icon_exit.png"),
+            width: 24,
+            height: 24,
+          ))
     ],
     bottom: TabBar(
       indicatorSize: TabBarIndicatorSize.tab,

@@ -35,6 +35,7 @@ class listTiles extends StatelessWidget {
         itemCount: 3,
         itemBuilder: (context, index) {
           return ListTile(
+            onTap: () {},
             leading: listImages[index],
             title: Text(Strings.titlesForList[index],
                 style: const TextStyle(
