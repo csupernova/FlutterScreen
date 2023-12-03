@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen/constants/colors.dart';
+import 'package:flutter_screen/constants/paddings.dart';
+import 'package:flutter_screen/constants/sizes.dart';
 import 'package:flutter_screen/constants/strings.dart';
 
 // ignore: camel_case_types
@@ -11,16 +13,23 @@ class Chips extends StatefulWidget {
 }
 
 class _ChipsState extends State<Chips> {
-  List<bool> _isPressed = [false, false, false, false, false, false, false];
-  List<bool> _isSelected = [false, false, false, false, false, false, false];
+  final List<bool> _isSelected = [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 16),
+        padding: const EdgeInsets.only(left: AppPaddings.mainSidePadding),
         child: Wrap(
-          runSpacing: -5,
-          spacing: 8,
+          runSpacing: AppPaddings.filterRunSpacing,
+          spacing: AppPaddings.filterSpacing,
           children: Strings.filters.asMap().entries.map((entry) {
             int index = entry.key;
             String tag = entry.value;
@@ -28,18 +37,18 @@ class _ChipsState extends State<Chips> {
               selected: _isSelected[index],
               label: Text(tag,
                   style: const TextStyle(
-                    fontSize: 14,
+                    fontSize: Sizes.fontRegularSize,
                   )),
               side: BorderSide.none,
               shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
+                  borderRadius: BorderRadius.all(
+                      Radius.circular(Sizes.radiusBorderChip))),
               onPressed: () {
                 setState(() {
                   _isSelected[index] = !_isSelected[index];
-                  _isPressed[index] = !_isPressed[index];
                 });
               },
-              backgroundColor: Color.fromRGBO(0, 0, 0, 0.08),
+              backgroundColor: AppColors.greyChip,
               selectedColor: AppColors.iconGreen,
             );
           }).toList(),

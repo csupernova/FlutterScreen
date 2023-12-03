@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screen/constants/strings.dart';
 
 class settingsScreen extends StatelessWidget {
   const settingsScreen({super.key});
@@ -7,7 +8,7 @@ class settingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("That's settings :)"),
+        child: Text(Strings.settingsScreen),
       ),
     );
   }

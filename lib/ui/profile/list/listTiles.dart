@@ -1,24 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen/constants/colors.dart';
+import 'package:flutter_screen/constants/paddings.dart';
+import 'package:flutter_screen/constants/sizes.dart';
 import 'package:flutter_screen/constants/strings.dart';
 
 class listTiles extends StatelessWidget {
   const listTiles({super.key});
 
   static const listImages = [
-    Image(
-        image: AssetImage("assets/images/icon_speedometr.png"),
-        height: 36,
-        width: 36),
-    Image(
-        image: AssetImage("assets/images/icon_precent.png"),
-        height: 36,
-        width: 36),
-    Image(
-      image: AssetImage("assets/images/icon_arrows_forward.png"),
-      height: 36,
-      width: 36,
-    )
+    AssetImage("assets/images/icon_speedometr.png"),
+    AssetImage("assets/images/icon_precent.png"),
+    AssetImage("assets/images/icon_arrows_forward.png"),
   ];
 
   @override
@@ -28,29 +20,33 @@ class listTiles extends StatelessWidget {
         shrinkWrap: true,
         separatorBuilder: (BuildContext, context) {
           return const Divider(
-            height: 0,
-            indent: 70.0,
+            indent: AppPaddings.dividerLeftPadding,
           );
         },
         itemCount: 3,
         itemBuilder: (context, index) {
           return ListTile(
             onTap: () {},
-            leading: listImages[index],
+            leading: Image(
+              image: listImages[index],
+              height: Sizes.iconSize,
+              width: Sizes.iconSize,
+            ),
             title: Text(Strings.titlesForList[index],
                 style: const TextStyle(
-                  fontSize: 16,
-                  height: 20 / 16,
+                  fontSize: Sizes.fontListTitleSize,
+                  height: Sizes.heightListTitle,
                   fontWeight: FontWeight.w500,
                 )),
             subtitle: Text(Strings.subTitlesForList[index],
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: Sizes.fontRegularSize,
                   fontWeight: FontWeight.w500,
                   color: AppColors.grey,
-                  height: 18 / 14,
+                  height: Sizes.heightListText,
                 )),
-            trailing: const Icon(Icons.arrow_forward_ios, size: 15),
+            trailing:
+                const Icon(Icons.arrow_forward_ios, size: Sizes.arrowSize),
           );
         });
   }

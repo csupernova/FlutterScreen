@@ -51,4 +51,6 @@ class Strings {
     "Забота о себе",
     "Наука"
   ];
+
+  static const String settingsScreen = "That's settings :)";
 }

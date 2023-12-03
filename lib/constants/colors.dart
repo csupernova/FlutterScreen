@@ -7,4 +7,5 @@ class AppColors {
   static const dividerGreen = Color(0xFF068441);
   static const black = Color(0xFF000000);
   static const grey = Color.fromRGBO(0, 0, 0, 0.55);
+  static const greyChip = Color.fromRGBO(0, 0, 0, 0.08);
 }

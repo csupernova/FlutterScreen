@@ -14,8 +14,8 @@ SliverAppBar sliverAppBar() {
           onPressed: () {},
           icon: const Image(
             image: AssetImage("assets/images/icon_exit.png"),
-            width: 24,
-            height: 24,
+            width: Sizes.iconAppBar,
+            height: Sizes.iconAppBar,
           ))
     ],
     bottom: TabBar(
@@ -33,7 +33,7 @@ SliverAppBar sliverAppBar() {
       // Function callback for stretch
       return Future<void>.value();
     },
-    expandedHeight: 260.0,
+    expandedHeight: Sizes.topSectionHeight,
     flexibleSpace: const FlexibleSpaceBar(
       stretchModes: <StretchMode>[
         StretchMode.zoomBackground,
@@ -46,8 +46,8 @@ SliverAppBar sliverAppBar() {
           Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Image(
               image: AssetImage("assets/images/avatar.png"),
-              height: 110,
-              width: 110,
+              height: Sizes.avatarSize,
+              width: Sizes.avatarSize,
             ),
             Padding(
               padding: EdgeInsets.only(
@@ -56,7 +56,6 @@ SliverAppBar sliverAppBar() {
                   style: TextStyle(
                     fontSize: Sizes.fontNameSize,
                     fontWeight: FontWeight.w700,
-                    fontFamily: "SF Pro Display",
                     color: AppColors.black,
                     height: Sizes.heightName,
                   )),

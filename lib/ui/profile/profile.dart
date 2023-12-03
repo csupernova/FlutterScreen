@@ -11,21 +11,13 @@ class profileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.start,
-        // mainAxisSize: MainAxisSize.max,
-        children: const [
-          subscriptions(),
-          carousel(),
-          tarifksText(),
-          listTiles(),
-          filtersText(),
-          Chips()
-        ]
-        // tarifksText(),
-        // listTiles(),
-        // filtersText()
-        );
+    return ListView(children: const [
+      subscriptions(),
+      carousel(),
+      tarifksText(),
+      listTiles(),
+      filtersText(),
+      Chips()
+    ]);
   }
 }

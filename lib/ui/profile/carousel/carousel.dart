@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen/constants/colors.dart';
+import 'package:flutter_screen/constants/paddings.dart';
 import 'package:flutter_screen/constants/sizes.dart';
 import 'package:flutter_screen/constants/strings.dart';
 
@@ -11,8 +12,8 @@ class carousel extends StatelessWidget {
       image: AssetImage(
         "assets/images/icon_sberprime.png",
       ),
-      height: 36,
-      width: 36,
+      height: Sizes.iconSize,
+      width: Sizes.iconSize,
     ),
     CircleAvatar(
         backgroundColor: Colors.green,
@@ -24,11 +25,11 @@ class carousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(
-          top: 8,
-          left: 16,
+          top: AppPaddings.paddingCardTop,
+          left: AppPaddings.mainSidePadding,
         ),
         child: Container(
-          height: 130,
+          height: Sizes.cardHeight,
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -36,11 +37,12 @@ class carousel extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 2,
+                  itemCount: Strings.titles.length,
                   itemBuilder: (context, index) {
-                    return SizedBox(
-                        width: 216,
+                    return Container(
+                        width: Sizes.cardWidth,
                         child: Card(
+                          shadowColor: Colors.black,
                           surfaceTintColor: Colors.white,
                           child: InkWell(
                             borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -53,7 +55,9 @@ class carousel extends StatelessWidget {
                                     children: [
                                       Padding(
                                           padding: const EdgeInsets.only(
-                                              top: 16, left: 16, right: 12),
+                                              top: AppPaddings.mainSidePadding,
+                                              left: AppPaddings.mainSidePadding,
+                                              right: 12),
                                           child: images[index]),
                                       Padding(
                                           padding:
@@ -64,20 +68,20 @@ class carousel extends StatelessWidget {
                                                     Sizes.fontCardTitleSize,
                                                 fontWeight: FontWeight.w500,
                                                 color: AppColors.black,
-                                                height: 20 / 16,
                                               )))
                                     ],
                                   ),
                                   Padding(
                                       padding: const EdgeInsets.only(
-                                          top: 18, left: 16),
+                                          top: 18,
+                                          left: AppPaddings.mainSidePadding),
                                       child:
                                           Text(Strings.secondary_titles[index],
                                               style: const TextStyle(
                                                 fontSize: Sizes.fontRegularSize,
                                                 fontWeight: FontWeight.w500,
-                                                color: Color(0xff000000),
-                                                height: 18 / 14,
+                                                color: AppColors.black,
+                                                height: Sizes.hsubTitlesCard,
                                               ))),
                                   Padding(
                                       padding: const EdgeInsets.only(
@@ -87,8 +91,8 @@ class carousel extends StatelessWidget {
                                           style: const TextStyle(
                                             fontSize: Sizes.fontRegularSize,
                                             fontWeight: FontWeight.w500,
-                                            color: Color(0xff000000),
-                                            height: 18 / 14,
+                                            color: AppColors.black,
+                                            height: Sizes.hsubTitlesCard,
                                           )))
                                 ]),
                           ),
