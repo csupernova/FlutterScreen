@@ -16,7 +16,6 @@ class subscriptions extends StatelessWidget {
             padding: EdgeInsets.only(top: 30, bottom: 8, left: 16, right: 16),
             child: Text(Strings.subTitleSection,
                 style: TextStyle(
-                    fontFamily: "SF Pro Text",
                     fontSize: Sizes.fontTitleSize,
                     fontWeight: FontWeight.w700,
                     color: AppColors.black,
@@ -26,7 +25,6 @@ class subscriptions extends StatelessWidget {
             child: Text(Strings.subTextSection,
                 textAlign: TextAlign.left,
                 style: TextStyle(
-                  fontFamily: "SF Pro Text",
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
                   color: AppColors.grey,

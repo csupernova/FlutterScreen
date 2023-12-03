@@ -23,7 +23,10 @@ class carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(top: 8, left: 16, right: 16),
+        padding: const EdgeInsets.only(
+          top: 8,
+          left: 16,
+        ),
         child: Container(
           height: 130,
           child: Row(
@@ -50,7 +53,7 @@ class carousel extends StatelessWidget {
                                           top: 16, left: 16, right: 12),
                                       child: images[index]),
                                   Padding(
-                                      padding: EdgeInsets.only(top: 10),
+                                      padding: const EdgeInsets.only(top: 10),
                                       child: Text(Strings.titles[index],
                                           style: const TextStyle(
                                             fontSize: Sizes.fontCardTitleSize,
@@ -61,7 +64,8 @@ class carousel extends StatelessWidget {
                                 ],
                               ),
                               Padding(
-                                  padding: EdgeInsets.only(top: 18, left: 16),
+                                  padding:
+                                      const EdgeInsets.only(top: 18, left: 16),
                                   child: Text(Strings.secondary_titles[index],
                                       style: const TextStyle(
                                         fontSize: Sizes.fontRegularSize,
@@ -70,11 +74,11 @@ class carousel extends StatelessWidget {
                                         height: 18 / 14,
                                       ))),
                               Padding(
-                                  padding:
-                                      EdgeInsets.only(bottom: 16, left: 16),
+                                  padding: const EdgeInsets.only(
+                                      bottom: 16, left: 16),
                                   child:
                                       Text(Strings.secondary_subtitles[index],
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontSize: Sizes.fontRegularSize,
                                             fontWeight: FontWeight.w500,
                                             color: Color(0xff000000),

@@ -23,4 +23,16 @@ class Strings {
 
   static const tarifsAndLimits = "Тарифы и лимиты";
   static const secondsubTarif = "Для операций в Сбербанк Онлайн";
+
+  static const List<String> titlesForList = [
+    "Изменить суточный лимит",
+    "Переводы без комиссии",
+    "Информация о тарифах и лимитах"
+  ];
+
+  static const List<String> subTitlesForList = [
+    "На платежи и переводы",
+    "Показать остаток в этом месяце",
+    ""
+  ];
 }
