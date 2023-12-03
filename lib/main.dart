@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen/constants/colors.dart';
-import 'package:flutter_screen/ui/profile/carousel/carousel.dart';
+import 'package:flutter_screen/ui/profile/filters/chips.dart';
 import 'package:flutter_screen/ui/profile/profile.dart';
-import 'package:flutter_screen/ui/settings/settingsScreen.dart';
 import 'package:flutter_screen/ui/topsection/topsection.dart';
 
 void main() {

@@ -12,18 +12,16 @@ SliverAppBar sliverAppBar() {
     actions: [
       IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_right_alt))
     ],
-    bottom: const TabBar(
-        indicatorSize: TabBarIndicatorSize.tab,
-        indicatorColor: AppColors.dividerGreen,
-        labelColor: AppColors.black,
-        tabs: [
-          Tab(
-            text: Strings.profile,
-          ),
-          Tab(
-            text: Strings.settings,
+    bottom: TabBar(
+      indicatorSize: TabBarIndicatorSize.tab,
+      indicatorColor: AppColors.dividerGreen,
+      labelColor: AppColors.black,
+      tabs: Strings.tabs
+          .map(
+            (tabName) => Tab(text: tabName),
           )
-        ]),
+          .toList(),
+    ),
     stretch: true,
     onStretchTrigger: () {
       // Function callback for stretch

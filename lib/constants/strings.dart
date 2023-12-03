@@ -1,6 +1,8 @@
 class Strings {
   Strings._();
 
+  static const List<String> tabs = [Strings.profile, Strings.settings];
+
   static const String name = "Екатерина";
   static const String profile = "Профиль";
   static const String settings = "Настройки";
@@ -34,5 +36,19 @@ class Strings {
     "На платежи и переводы",
     "Показать остаток в этом месяце",
     ""
+  ];
+
+  static const String interests = "Интересы";
+  static const String subTextInterests =
+      "Мы подбираем истории и предложения по темам, которые вам нравятся";
+
+  static const List<String> filters = [
+    "Еда",
+    "Саморазвитие",
+    "Технологии",
+    "Дом",
+    "Досуг",
+    "Забота о себе",
+    "Наука"
   ];
 }

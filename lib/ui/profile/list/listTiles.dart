@@ -23,27 +23,34 @@ class listTiles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: ListView.builder(
-            itemCount: 3,
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: listImages[index],
-                title: Text(Strings.titlesForList[index],
-                    style: const TextStyle(
-                      fontSize: 16,
-                      height: 20 / 16,
-                      fontWeight: FontWeight.w500,
-                    )),
-                subtitle: Text(Strings.subTitlesForList[index],
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.grey,
-                      height: 18 / 14,
-                    )),
-                trailing: const Icon(Icons.arrow_forward_ios, size: 15),
-              );
-            }));
+    return ListView.separated(
+        physics: ClampingScrollPhysics(),
+        shrinkWrap: true,
+        separatorBuilder: (BuildContext, context) {
+          return const Divider(
+            height: 0,
+            indent: 70.0,
+          );
+        },
+        itemCount: 3,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: listImages[index],
+            title: Text(Strings.titlesForList[index],
+                style: const TextStyle(
+                  fontSize: 16,
+                  height: 20 / 16,
+                  fontWeight: FontWeight.w500,
+                )),
+            subtitle: Text(Strings.subTitlesForList[index],
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.grey,
+                  height: 18 / 14,
+                )),
+            trailing: const Icon(Icons.arrow_forward_ios, size: 15),
+          );
+        });
   }
 }

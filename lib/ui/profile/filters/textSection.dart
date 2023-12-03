@@ -3,26 +3,27 @@ import 'package:flutter_screen/constants/colors.dart';
 import 'package:flutter_screen/constants/sizes.dart';
 import 'package:flutter_screen/constants/strings.dart';
 
-class subscriptions extends StatelessWidget {
-  const subscriptions({super.key});
+class filtersText extends StatelessWidget {
+  const filtersText({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Container(
+        child: const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-            padding: EdgeInsets.only(bottom: 8, left: 16, right: 16),
-            child: Text(Strings.subTitleSection,
+            padding: EdgeInsets.only(top: 30, bottom: 8, left: 16, right: 16),
+            child: Text(Strings.interests,
                 style: TextStyle(
                     fontSize: Sizes.fontTitleSize,
                     fontWeight: FontWeight.w700,
                     color: AppColors.black,
                     height: Sizes.heightTitle))),
         Padding(
-            padding: EdgeInsets.only(left: 16, right: 20),
-            child: Text(Strings.subTextSection,
+            padding: EdgeInsets.only(left: 16, right: 20, bottom: 16),
+            child: Text(Strings.subTextInterests,
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontSize: 14,
@@ -30,6 +31,6 @@ class subscriptions extends StatelessWidget {
                   color: AppColors.grey,
                 ))),
       ],
-    );
+    ));
   }
 }
