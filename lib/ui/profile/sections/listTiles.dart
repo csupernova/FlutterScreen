@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screen/constants/colors.dart';
-import 'package:flutter_screen/constants/paddings.dart';
-import 'package:flutter_screen/constants/sizes.dart';
-import 'package:flutter_screen/constants/strings.dart';
+import 'package:flutter_screen/ui/constants/colors.dart';
+import 'package:flutter_screen/ui/constants/paddings.dart';
+import 'package:flutter_screen/ui/constants/sizes.dart';
+import 'package:flutter_screen/ui/constants/strings.dart';
 
-class listTiles extends StatelessWidget {
-  const listTiles({super.key});
+class ListTiles extends StatelessWidget {
+  const ListTiles({super.key});
 
   static const listImages = [
     AssetImage("assets/images/icon_speedometr.png"),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screen/constants/colors.dart';
-import 'package:flutter_screen/constants/paddings.dart';
-import 'package:flutter_screen/constants/sizes.dart';
-import 'package:flutter_screen/constants/strings.dart';
+import 'package:flutter_screen/ui/constants/colors.dart';
+import 'package:flutter_screen/ui/constants/paddings.dart';
+import 'package:flutter_screen/ui/constants/sizes.dart';
+import 'package:flutter_screen/ui/constants/strings.dart';
 
-class carousel extends StatelessWidget {
-  const carousel({super.key});
+class Carousel extends StatelessWidget {
+  const Carousel({super.key});
 
   static const List images = [
     Image(
@@ -26,7 +26,6 @@ class carousel extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.only(
           top: AppPaddings.paddingCardTop,
-          //left: AppPaddings.mainSidePadding,
         ),
         child: Container(
           height: Sizes.cardHeight,

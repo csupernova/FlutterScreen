@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screen/constants/colors.dart';
-import 'package:flutter_screen/constants/paddings.dart';
-import 'package:flutter_screen/constants/sizes.dart';
-import 'package:flutter_screen/constants/strings.dart';
+import 'package:flutter_screen/ui/constants/colors.dart';
+import 'package:flutter_screen/ui/constants/paddings.dart';
+import 'package:flutter_screen/ui/constants/sizes.dart';
+import 'package:flutter_screen/ui/constants/strings.dart';
 
-class filtersText extends StatelessWidget {
-  const filtersText({super.key});
+// ignore: camel_case_types
+class SubsText extends StatelessWidget {
+  const SubsText({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: const Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
             padding: EdgeInsets.only(
-                top: AppPaddings.filterTitleTop,
-                bottom: AppPaddings.filterTitleBottom,
+                top: 30,
+                bottom: 8,
                 left: AppPaddings.mainSidePadding,
                 right: AppPaddings.mainSidePadding),
-            child: Text(Strings.interests,
+            child: Text(Strings.subTitleSection,
                 style: TextStyle(
                     fontSize: Sizes.fontTitleSize,
                     fontWeight: FontWeight.w700,
@@ -29,9 +29,8 @@ class filtersText extends StatelessWidget {
         Padding(
             padding: EdgeInsets.only(
                 left: AppPaddings.mainSidePadding,
-                right: AppPaddings.filterSubTextRight,
-                bottom: AppPaddings.filterSubTextBottom),
-            child: Text(Strings.subTextInterests,
+                right: AppPaddings.mainSidePadding),
+            child: Text(Strings.subTextSection,
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontSize: Sizes.fontRegularSize,
@@ -39,6 +38,6 @@ class filtersText extends StatelessWidget {
                   color: AppColors.grey,
                 ))),
       ],
-    ));
+    );
   }
 }
