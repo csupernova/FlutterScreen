@@ -14,6 +14,8 @@ class Sizes {
   static const fontRegularSize = 14.0;
   static const fontCardTitleSize = 16.0;
 
+  static const fontTabTitleSize = 16.0;
+
   static const fontListTitleSize = 16.0;
   static const heightListTitle = 20 / 16;
   static const heightListText = 18 / 14;

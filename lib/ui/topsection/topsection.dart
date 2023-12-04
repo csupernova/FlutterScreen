@@ -22,9 +22,12 @@ SliverAppBar sliverAppBar() {
       indicatorSize: TabBarIndicatorSize.tab,
       indicatorColor: AppColors.dividerGreen,
       labelColor: AppColors.black,
+      labelStyle: const TextStyle(fontSize: Sizes.fontTabTitleSize),
       tabs: Strings.tabs
           .map(
-            (tabName) => Tab(text: tabName),
+            (tabName) => Tab(
+              text: tabName,
+            ),
           )
           .toList(),
     ),
@@ -41,7 +44,7 @@ SliverAppBar sliverAppBar() {
         StretchMode.fadeTitle,
       ],
       background: Stack(
-        alignment: Alignment.center,
+        alignment: Alignment.bottomCenter,
         children: <Widget>[
           Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Image(

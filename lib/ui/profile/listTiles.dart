@@ -16,6 +16,7 @@ class listTiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+        padding: EdgeInsets.zero,
         physics: ClampingScrollPhysics(),
         shrinkWrap: true,
         separatorBuilder: (BuildContext, context) {
@@ -26,6 +27,7 @@ class listTiles extends StatelessWidget {
         itemCount: 3,
         itemBuilder: (context, index) {
           return ListTile(
+            dense: true,
             onTap: () {},
             leading: Image(
               image: listImages[index],

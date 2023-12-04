@@ -1,8 +1,8 @@
 class AppPaddings {
   const AppPaddings._();
 
-  static const nameBottom = 18.0;
-  static const nameTop = 35.0;
+  static const nameBottom = 0.0;
+  static const nameTop = 30.0;
 
   static const mainSidePadding = 16.0;
 

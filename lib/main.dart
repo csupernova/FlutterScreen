@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
             fontFamily: 'SFProText',
             useMaterial3: true,
             appBarTheme: const AppBarTheme(
-                color: Colors.white,
+                color: AppColors.white,
                 iconTheme: IconThemeData(color: AppColors.iconGreen))),
         home: const DefaultTabController(
-          child: MyHomePage(),
           length: 2,
+          child: MyHomePage(),
         ));
   }
 }

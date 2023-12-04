@@ -5,8 +5,8 @@ import 'package:flutter_screen/constants/sizes.dart';
 import 'package:flutter_screen/constants/strings.dart';
 
 // ignore: camel_case_types
-class tarifksText extends StatelessWidget {
-  const tarifksText({super.key});
+class subscriptions extends StatelessWidget {
+  const subscriptions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,19 +16,21 @@ class tarifksText extends StatelessWidget {
       children: [
         Padding(
             padding: EdgeInsets.only(
-                top: AppPaddings.tarifsTextTop,
-                bottom: AppPaddings.tarifsTextBottom,
-                left: AppPaddings.mainSidePadding),
-            child: Text(Strings.tarifsAndLimits,
-                textAlign: TextAlign.left,
+                top: 30,
+                bottom: 8,
+                left: AppPaddings.mainSidePadding,
+                right: AppPaddings.mainSidePadding),
+            child: Text(Strings.subTitleSection,
                 style: TextStyle(
                     fontSize: Sizes.fontTitleSize,
                     fontWeight: FontWeight.w700,
                     color: AppColors.black,
                     height: Sizes.heightTitle))),
         Padding(
-            padding: EdgeInsets.only(left: AppPaddings.mainSidePadding),
-            child: Text(Strings.secondsubTarif,
+            padding: EdgeInsets.only(
+                left: AppPaddings.mainSidePadding,
+                right: AppPaddings.mainSidePadding),
+            child: Text(Strings.subTextSection,
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontSize: Sizes.fontRegularSize,
