@@ -12,13 +12,12 @@ class Strings {
 
   static const List<String> titles = ["СберПрайм", "Переводы"];
 
-  // ignore: constant_identifier_names
-  static const List<String> secondary_titles = [
+  static const List<String> secondaryTitles = [
     "Платеж 9 июля",
     "Автопродление 21 августа"
   ];
-  // ignore: constant_identifier_names
-  static const List<String> secondary_subtitles = [
+
+  static const List<String> secondarySubtitles = [
     "199 ₽ в месяц",
     "199 ₽ в месяц"
   ];

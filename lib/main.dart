@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen/ui/constants/colors.dart';
+import 'package:flutter_screen/ui/constants/strings.dart';
 import 'package:flutter_screen/ui/profile/profile.dart';
 import 'package:flutter_screen/ui/settings/settingsScreen.dart';
 import 'package:flutter_screen/ui/topsection/topsection.dart';

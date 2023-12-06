@@ -27,7 +27,7 @@ class _ChipsState extends State<Chips> {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(
-          left: AppPaddings.mainSidePadding,
+          left: AppPaddings.mainSidePadding - 5,
           right: AppPaddings.mainSidePadding,
         ),
         child: Wrap(

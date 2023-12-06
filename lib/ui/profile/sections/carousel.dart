@@ -40,9 +40,11 @@ class Carousel extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Padding(
                         padding: EdgeInsets.only(
-                          left: (index == 0) ? AppPaddings.mainSidePadding : 0,
+                          left: (index == 0)
+                              ? AppPaddings.carouselSidePaddong
+                              : 0,
                           right: (index == Strings.titles.length - 1)
-                              ? AppPaddings.mainSidePadding
+                              ? AppPaddings.carouselSidePaddong
                               : 0,
                         ),
                         child: Container(
@@ -74,6 +76,7 @@ class Carousel extends StatelessWidget {
                                                   top: 10),
                                               child: Text(Strings.titles[index],
                                                   style: const TextStyle(
+                                                    fontFamily: 'SFProText',
                                                     fontSize:
                                                         Sizes.fontCardTitleSize,
                                                     fontWeight: FontWeight.w500,
@@ -87,8 +90,9 @@ class Carousel extends StatelessWidget {
                                               left:
                                                   AppPaddings.mainSidePadding),
                                           child: Text(
-                                              Strings.secondary_titles[index],
+                                              Strings.secondaryTitles[index],
                                               style: const TextStyle(
+                                                fontFamily: 'SFProText',
                                                 fontSize: Sizes.fontRegularSize,
                                                 fontWeight: FontWeight.w500,
                                                 color: AppColors.black,
@@ -100,12 +104,11 @@ class Carousel extends StatelessWidget {
                                               left:
                                                   AppPaddings.mainSidePadding),
                                           child: Text(
-                                              Strings
-                                                  .secondary_subtitles[index],
+                                              Strings.secondarySubtitles[index],
                                               style: const TextStyle(
                                                 fontSize: Sizes.fontRegularSize,
                                                 fontWeight: FontWeight.w500,
-                                                color: AppColors.black,
+                                                color: AppColors.grey,
                                                 height: Sizes.hsubTitlesCard,
                                               )))
                                     ]),

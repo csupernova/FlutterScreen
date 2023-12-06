@@ -24,7 +24,7 @@ class ListTiles extends StatelessWidget {
             indent: AppPaddings.dividerLeftPadding,
           );
         },
-        itemCount: 3,
+        itemCount: Strings.titlesForList.length,
         itemBuilder: (context, index) {
           return ListTile(
             dense: true,
@@ -34,12 +34,15 @@ class ListTiles extends StatelessWidget {
               height: Sizes.iconSize,
               width: Sizes.iconSize,
             ),
-            title: Text(Strings.titlesForList[index],
-                style: const TextStyle(
-                  fontSize: Sizes.fontListTitleSize,
-                  height: Sizes.heightListTitle,
-                  fontWeight: FontWeight.w500,
-                )),
+            title: Padding(
+                padding: const EdgeInsets.only(
+                    right: AppPaddings.padTitleInideTileRight),
+                child: Text(Strings.titlesForList[index],
+                    style: const TextStyle(
+                        fontSize: Sizes.fontListTitleSize,
+                        height: Sizes.heightListTitle,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.black))),
             subtitle: Text(Strings.subTitlesForList[index],
                 style: const TextStyle(
                   fontSize: Sizes.fontRegularSize,
