@@ -54,7 +54,7 @@ class Carousel extends StatelessWidget {
                               surfaceTintColor: Colors.white,
                               child: InkWell(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(8)),
+                                    const BorderRadius.all(Radius.circular(8)),
                                 onTap: () {},
                                 child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -76,7 +76,7 @@ class Carousel extends StatelessWidget {
                                                   top: 10),
                                               child: Text(Strings.titles[index],
                                                   style: const TextStyle(
-                                                    fontFamily: 'SFProText',
+                                                    fontStyle: FontStyle.normal,
                                                     fontSize:
                                                         Sizes.fontCardTitleSize,
                                                     fontWeight: FontWeight.w500,
@@ -92,7 +92,7 @@ class Carousel extends StatelessWidget {
                                           child: Text(
                                               Strings.secondaryTitles[index],
                                               style: const TextStyle(
-                                                fontFamily: 'SFProText',
+                                                fontStyle: FontStyle.normal,
                                                 fontSize: Sizes.fontRegularSize,
                                                 fontWeight: FontWeight.w500,
                                                 color: AppColors.black,

@@ -13,7 +13,7 @@ class Strings {
   static const List<String> titles = ["СберПрайм", "Переводы"];
 
   static const List<String> secondaryTitles = [
-    "Платеж 9 июля",
+    "Платёж 9 июля",
     "Автопродление 21 августа"
   ];
 

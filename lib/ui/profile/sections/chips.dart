@@ -27,8 +27,8 @@ class _ChipsState extends State<Chips> {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(
-          left: AppPaddings.mainSidePadding - 5,
-          right: AppPaddings.mainSidePadding,
+          left: AppPaddings.mainSidePadding,
+          right: AppPaddings.mainSidePadding - 8,
         ),
         child: Wrap(
           runSpacing: AppPaddings.filterRunSpacing,
@@ -40,8 +40,7 @@ class _ChipsState extends State<Chips> {
               selected: _isSelected[index],
               label: Text(tag,
                   style: const TextStyle(
-                    fontSize: Sizes.fontRegularSize,
-                  )),
+                      fontSize: Sizes.fontRegularSize, color: AppColors.black)),
               side: BorderSide.none,
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(

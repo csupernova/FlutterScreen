@@ -6,7 +6,7 @@ class Sizes {
   static const iconAppBar = 24.0;
   static const fontNameSize = 24.0;
   static const heightName = 32 / 24;
-  static const topSectionHeight = 260.0;
+  static const topSectionHeight = 270.0;
 
 //card
   static const fontTitleSize = 20.0;
@@ -27,7 +27,7 @@ class Sizes {
 
 //card
   static const cardHeight = 130.0;
-  static const cardWidth = 216.0;
+  static const cardWidth = 225.0;
 
 //icons
   static const iconSize = 36.0;

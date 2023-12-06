@@ -22,7 +22,10 @@ SliverAppBar sliverAppBar() {
       indicatorSize: TabBarIndicatorSize.tab,
       indicatorColor: AppColors.dividerGreen,
       labelColor: AppColors.black,
-      labelStyle: const TextStyle(fontSize: Sizes.fontTabTitleSize),
+      labelStyle: const TextStyle(
+        fontSize: Sizes.fontTabTitleSize,
+        fontStyle: FontStyle.normal,
+      ),
       tabs: Strings.tabs
           .map(
             (tabName) => Tab(
@@ -33,7 +36,6 @@ SliverAppBar sliverAppBar() {
     ),
     stretch: true,
     onStretchTrigger: () {
-      // Function callback for stretch
       return Future<void>.value();
     },
     expandedHeight: Sizes.topSectionHeight,
