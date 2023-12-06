@@ -20,7 +20,7 @@
 ### Запуск проекта (VS Code)
 <p>Запустить VS Code, нажать комбинацию "Ctrl+Shift+P", выбрать "Git: Clone", вставить https://github.com/csupernova/FlutterScreen.git</p>
 <img src = "https://github.com/csupernova/FlutterScreen/assets/84630611/56610b56-bda4-477d-88f6-2d1bc92b55bb">
-<p>После чего выбрать репозиторий для сохранения проекта, затем открыть его в VS Code. Открыть терминал (Ctrl+Shift+` или Terminal --> New Terminal) и в папке с проектом прописать "flutter pub get" для загрузки зависимостей.
+<p>После чего выбрать репозиторий для сохранения проекта, затем открыть его в VS Code. Открыть терминал (Ctrl+Shift+` или Terminal --> New Terminal) и в папке с проектом прописать "flutter pub get" для загрузки зависимостей.</p>
 <img src = "https://github.com/csupernova/FlutterScreen/assets/84630611/3bf5e65e-d875-4d93-a2d2-8e14748f5023">
 <p>Выбрать эмулятор или физическое устройство в правом нижнем углу</p>.
 <img src = "https://github.com/csupernova/FlutterScreen/assets/84630611/e2e2d289-53ce-4d43-a43a-c16ad2904bd7">
